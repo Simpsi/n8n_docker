@@ -10,4 +10,4 @@ logs:
 ps:
 	sudo docker compose ps
 
-git:	git commit -aM "auto-commit makefile command" && git push
+git:	git commit -aM "auto-commit makefile command" && sudo git push
