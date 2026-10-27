@@ -87,6 +87,12 @@ services:
     env_file: .env
     volumes:
       - n8n-data:/home/node/.n8n
+      - ./scripts:/opt/scripts:ro
+      - ./speiseplan:/speiseplan
+
+    environment:
+      NODES_EXCLUDE: "[]"
+      GENERIC_TIMEZONE: Europe/Berlin
 
   runners:
     image: ghcr.io/n8n-io/runners:${N8N_VERSION}
